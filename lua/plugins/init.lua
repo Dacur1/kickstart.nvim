@@ -17,4 +17,5 @@ require('lazy').setup {
   require 'plugins.colorscheme',
   require 'plugins.refactoring',
   require 'plugins.autocompletion',
+  require 'plugins.live-server',
 }
