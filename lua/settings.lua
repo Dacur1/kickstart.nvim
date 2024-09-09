@@ -60,8 +60,7 @@ vim.opt.cursorline = true
 vim.opt.scrolloff = 10
 
 -- Set Tabspace and shiftwidth
-vim.opt.expandtab = true -- Pressing the TAB key will insert spaces instead of a TAB character
-vim.opt.tabstop = 8 -- Always keep default 8 (see :h tabstop)
-vim.opt.shiftwidth = 4 -- Number of spaces inserted when indenting
-vim.opt.softtabstop = 4 -- Number of spaces inserted instead of a TAB character
-vim.opt.autoindent = true
+vim.cmd 'set expandtab' -- Pressing the TAB key will insert spaces instead of a TAB character
+vim.cmd 'set tabstop=4' -- Always keep default 8 (see :h tabstop)
+vim.cmd 'set shiftwidth=4' -- Number of spaces inserted when indenting
+vim.cmd 'set softtabstop=4' -- Number of spaces inserted instead of a TAB character
