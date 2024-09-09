@@ -1,3 +1,4 @@
+---@diagnostic disable: missing-fields
 -- debug.lua
 --
 -- Shows how to use the DAP plugin to debug your code.
@@ -7,9 +8,7 @@
 -- kickstart.nvim and not kitchen-sink.nvim ;)
 
 return {
-  -- NOTE: Yes, you can install new plugins here!
   'mfussenegger/nvim-dap',
-  -- NOTE: And you can specify dependencies as well
   dependencies = {
     -- Creates a beautiful debugger UI
     'rcarriga/nvim-dap-ui',
@@ -21,7 +20,7 @@ return {
     'williamboman/mason.nvim',
     'jay-babu/mason-nvim-dap.nvim',
 
-    -- Add your own debuggers here
+    -- add your own debuggers here
     'leoluz/nvim-dap-go',
   },
   config = function()
@@ -63,6 +62,8 @@ return {
       --    Don't feel like these are good choices.
       icons = { expanded = '▾', collapsed = '▸', current_frame = '*' },
       controls = {
+        element = 'repl',
+        enabled = true,
         icons = {
           pause = '⏸',
           play = '▶',
@@ -74,6 +75,12 @@ return {
           terminate = '⏹',
           disconnect = '⏏',
         },
+      },
+      element_mappings = {},
+      expand_lines = true,
+      floating = {
+        border = 'single',
+        mappings = { 'q', '<Esc>' },
       },
     }
 
