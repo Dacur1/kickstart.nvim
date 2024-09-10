@@ -7,12 +7,9 @@ return { -- Highlight, edit, and navigate code
     auto_install = true,
     highlight = {
       enable = true,
-      -- Some languages depend on vim's regex highlighting system (such as Ruby) for indent rules.
-      --  If you are experiencing weird indenting issues, add the language to
-      --  the list of additional_vim_regex_highlighting and disabled languages for indent.
-      additional_vim_regex_highlighting = { 'ruby', 'lua' },
+      additional_vim_regex_highlighting = { 'ruby', 'lua', 'html' },
     },
-    indent = { enable = true, disable = { 'ruby', 'lua' } },
+    indent = { enable = false, disable = { 'ruby', 'lua', 'html ' } },
   },
   config = function(_, opts)
     -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
